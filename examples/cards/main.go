@@ -3,16 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	// Verbose variable initialization
-	var card string = "Ace of Spades"
+	card := newCard()
 	fmt.Println(card)
-	card = "Daimonds"
 
-	// Simplified variable initialization
-	// Go "infer" the type base on the assigment
-	otherCard := "Hearths"
-	fmt.Println(otherCard)
+	sum := sumNumbers(2, 3)
+	fmt.Println(sum)
+}
 
-	// Can't assign a different type
-	//otherCard = 1
+func sumNumbers(num1 int, num2 int) int {
+	return num1 + num2
+}
+
+func newCard() string {
+	return "Ace of Spades"
 }
